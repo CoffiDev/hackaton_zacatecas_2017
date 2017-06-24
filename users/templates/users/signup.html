@@ -1,0 +1,30 @@
+{% extends "home/index.html" %}
+{% block card_content %}
+    <p>Registrate: </p>
+
+    <div>
+        <input type="text" placeholder="correo">
+        <br>
+        <input type="text" placeholder="Nombre(s)">
+        <br>
+        <input type="text" placeholder="Apellidos">
+        <br>
+        <input type="password" placeholder="contraseña">
+        <br>
+        <input type="password" placeholder="confirma contraseña">
+        <br>
+        <select name="" id="">
+            <option value="" selected>Area de interés</option>
+        </select>
+        <br>
+        <select name="" id="">
+            <option value="" selected>Nivel</option>
+        </select>
+        <br>
+        <p>Cuentanos tu perfil:</p>
+        <textarea name="perfil" id="" cols="30" rows="10" placeholder="Cuéntanos tu perfil">
+        </textarea>
+        <br>
+        <input type="submit">
+    </div>
+{% endblock %}

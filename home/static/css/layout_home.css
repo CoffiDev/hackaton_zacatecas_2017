@@ -1,0 +1,84 @@
+
+/*.green_gradient {
+    background: rgba(210,255,82,1);
+    background: -moz-linear-gradient(left, rgba(210,255,82, 0.5) 0%, rgba(0,179,72, 0.5) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(210,255,82, 0.5)), color-stop(100%, rgba(0,179,72, 0.5)));
+    background: -webkit-linear-gradient(left, rgba(210,255,82, 0.5) 0%, rgba(0,179,72, 0.5) 100%);
+    background: -o-linear-gradient(left, rgba(210,255,82, 0.5) 0%, rgba(0,179,72, 0.5) 100%);
+    background: -ms-linear-gradient(left, rgba(210,255,82, 0.5) 0%, rgba(0,179,72, 0.5) 100%);
+    background: linear-gradient(to right, rgba(210,255,82, 0.5) 0%, rgba(0,179,72, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#00b348', GradientType=1 );
+    opacity: 1;
+}*/
+
+.h-90 {
+    height: auto;
+    min-height: 90%;
+}
+
+.tj-l {
+    text-align: justify;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.green_gradient {
+    background: rgba(71,201,123,1);
+background: -moz-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(71,201,123,1)), color-stop(100%, rgba(0,140,56,1)));
+background: -webkit-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
+background: -o-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
+background: -ms-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
+background: linear-gradient(to right, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47c97b', endColorstr='#008c38', GradientType=1 );
+    opacity: 0.4;
+}
+
+.ff-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.home__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home__image {
+    background: url("https://bioagricultura.files.wordpress.com/2011/03/campo_maiz_camino.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home__headerText {
+
+    color: white;
+    display: flex;
+    margin-top: -20px;
+}
+
+.home__mainCard {
+    //position: absolute;
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    min-height: 70%;
+}
+
+.home__actionButtons > a {
+    margin: 1rem;
+    text-align: center;
+}
+
+.home__footer {
+    opacity: 1;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}

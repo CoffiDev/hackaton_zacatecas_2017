@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if title %}
+            {{ title }}
+        {% else %}
+            Conectate al campo
+        {% endif %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/layout_home.css' %}">
+</head>
+<body class="h-100">
+    {% block home_content %}
+
+    {% endblock %}
+</body>
+</html>
