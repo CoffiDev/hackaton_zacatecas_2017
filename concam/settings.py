@@ -115,23 +115,24 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 INTEREST_AREA = [
-    ("AG", "Aricultura"),
-    ("GA", "Ganaderia"),
-    ("MI", "Mineria"),
-    ("ING", "Ingenieria"),
-    ("SIS", "Sistemas"),
-    ("MEC", "Mecatronica"),
-    ("LIC", "Licenciatura")
+    ("Aricultura", "AGR"),
+    ("Ganaderia", "GAN"),
+    ("Mineria", "MIN"),
+    ("Ingenieria", "ING"),
+    ("Sistemas", "SIS"),
+    ("Mecatronica", "MEC"),
+    ("Licenciatura", "LIC")
 ]
 
 LEVEL = [
-    ("1", "sin experiencia",),
-    ("2", "con bachillerato", ),
-    ("3", "carrera recien comenzada", ),
-    ("4", "carrera casi terminada", ),
-    ("5", "profesionista"),
+    ("sin experiencia", "1"),
+    ("con bachillerato", "2"),
+    ("carrera recien comenzada", "3"),
+    ("carrera casi terminada", "4"),
+    ("profesionista", "5"),
 ]

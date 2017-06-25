@@ -11,28 +11,48 @@
 
         <section>
             {% for service in services_list %}
-                <article class="w-100 bg-white pa3 pa4-ns mv3 ba b--black-10 light_shadow">
-                    <div class="tc">
-                        <h2 class="f4 mb2 ff-roboto">{{ service.title }}</h2>
-                        <hr class="service__titleLine blue_gradient">
-                        <br>
-                        <p class="ma0 f6 w-100 tl ff-roboto">Descripcion</p>
-                        <p class="ma0 lh-copy measure center f6 black-70 tj-l">
-                            Quite affectionate and outgoing.
-                            She loves to get chin scratches and will
-                            roll around on the floor waiting for you give her more of them.
-                        </p>
-                        <br>
-                        <div class="dt w-100 mt1">
-                          <div class="dtc">
-                            <h1 class="f5 f4-ns mv0 tl">Quincenal</h1>
-                          </div>
-                          <div class="dtc tr">
-                            <h2 class="f5 mv0">$1,000</h2>
-                          </div>
+                <a href="{% url 'service_detail' service.pk %}" style="text-decoration: none; color: black">
+                    <article class="w-90 center bg-white pa3 pa4-ns mv3 ba b--black-10 light_shadow">
+
+                        <div class="tc">
+                            <h2 class="f4 mb2 ff-roboto">{{ service.name }}</h2>
+                            <hr class="service__titleLine blue_gradient">
+                            <br>
+                            <p class="ma0 f6 w-100 tl ff-roboto">Descripcion</p>
+                            <p class="ma0 lh-copy measure center f6 black-70 tj-l">
+                                {{ service.description }}
+                            </p>
+                            <br>
+
+                            <div class="dt w-100 mt1 ff-roboto">
+                                <div class="dtc">
+                                    <h1 class="f5 f4-ns mv0 tl">Nivel</h1>
+                                </div>
+                                <div class="dtc tr">
+                                    <h2 class="f5 mv0">{{ service.level }}</h2>
+                                </div>
+                            </div>
+
+                            <div class="dt w-100 mt1 ff-roboto">
+                                <div class="dtc">
+                                    <h1 class="f5 f4-ns mv0 tl">Área</h1>
+                                </div>
+                                <div class="dtc tr">
+                                    <h2 class="f5 mv0">{{ service.interest_area }}</h2>
+                                </div>
+                            </div>
+
+                            <div class="dt w-100 mt1 ff-roboto">
+                                <div class="dtc">
+                                    <h1 class="f5 f4-ns mv0 tl">Quincenal</h1>
+                                </div>
+                                <div class="dtc tr">
+                                    <h2 class="f5 mv0">${{ service.salary }}</h2>
+                                </div>
+                            </div>
                         </div>
-                  </div>
-                </article>
+                    </article>
+                </a>
             {% endfor %}
         </section>
     </div>

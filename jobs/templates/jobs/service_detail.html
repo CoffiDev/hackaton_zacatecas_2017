@@ -11,12 +11,13 @@
         <div class="serviceDetail__header relative center">
             <img class="center"
             src="https://maps.googleapis.com/maps/api/staticmap?
-            center=22.779903,-102.611349&zoom=15&size=1600x300&maptype=roadmap
-            &markers=color:red%7Clabel:S%7C22.779903,-102.611349
+            center={{ object.lat }},{{ object.lon }}&zoom=15&size=1600x300&maptype=roadmap
+            &markers=color:red%7Clabel:S%7C{{ object.lat }},{{ object.lon }}
             &key=AIzaSyA0GMpyvaUif6YqvfIOj3-b7BxxwJCtrpI" alt="">
 
             <div class="map__opacity absolute top-0 left-0 b--near-back o-30"></div>
-            <img class="serviceDetail__header__roundImg img_shadow br-50" src="http://cyclesurfstudio.com/wp-content/uploads/2015/09/profile-pic-round.png" alt="">
+            <img class="serviceDetail__header__roundImg img_shadow br-50"
+                 src="{{ object.client.image.url }}" alt="">
             <div class="serviceDetail__contactBtn ff-roboto tc img_shadow">
                 {% if service.userIsAcepted %}
                     Conectado
@@ -31,25 +32,31 @@
     <br>
     <div class="displayFlex justify-between pt4 center ff-roboto">
         <div class="w-40 dib tc">
-            <p class="f6 tl pl4">Alejandro Cuenca Estrada</p>
-
+            <p class="f6 tl pl4">{{ object.client.first_name }} {{ object.client.last_names }}</p>
         </div>
         <div class="w-40 dib tc">
-            <p class="f6 tl pr4">Agronomo de chile</p>
+            <p class="f6 tl pr4">{{ object.client.title }}</p>
         </div>
     </div>
 
     <div class="center w-100 ff-roboto">
-        <p class="f6 pl4">Calle 32-A #7 Colonia Santa Rosa</p>
+        <p class="f6 pl4">{{ object.address }}</p>
     </div>
     <br>
+
+    <hr class="blue_line">
+    <div class="displayFlex justify-between servideDetails w-90 center bg-white br3 pa3 pa4-ns mv3 ff-roboto">
+        <div class="f7">Nivel: {{ object.level }}</div>
+        <div class="f7">Área: {{ object.interest_area }}</div>
+    </div>
+
 
     <hr class="blue_line">
     <div class="servideDetails w-90 center bg-white br3 pa3 pa4-ns mv3 ff-roboto">
         <div class="detail__title">Descripción</div>
         <br>
         <div class="detail__content f7 tj-l">
-            Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet.
+            {{ object.description }}
         </div>
     </div>
 
@@ -58,17 +65,16 @@
         <div class="detail__title">Requerimientos</div>
         <br>
         <div class="detail__content f7 tj-l">
-            Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet.
+            {{ object.requirements }}
         </div>
     </div>
 
     <hr class="blue_line">
     <div class="servideDetails w-90 center bg-white br3 pa3 pa4-ns mv3 ff-roboto">
-        <div class="detail__title">Requerimientos</div>
+        <div class="detail__title">Información adicional</div>
         <br>
         <div class="detail__content f7 tj-l">
-            Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet.
+            {{ object.extraInfo}}
         </div>
     </div>
-
 {% endblock %}
