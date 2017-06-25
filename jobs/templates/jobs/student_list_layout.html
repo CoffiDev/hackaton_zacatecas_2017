@@ -1,0 +1,39 @@
+{% extends "home/layout.html" %}
+{% load staticfiles %}
+{% block home_content %}
+    <div class="student__list__container h-100% bg_light_custom_gray h-100">
+        <header class="application_header w-100 blue_gradient relative">
+            <div class="near-white ff-roboto w-100 h-100 displayFlex justify-center items-center f5">
+                CONECTATE AL CAMPO
+            </div>
+            <i class="fa fa-user absolute" aria-hidden="true"></i>
+        </header>
+
+        <section>
+            {% for service in services_list %}
+                <article class="w-100 bg-white pa3 pa4-ns mv3 ba b--black-10">
+                    <div class="tc">
+                        <h2 class="f4 mb2 ff-roboto">{{ service.title }}</h2>
+                        <hr class="service__titleLine blue_gradient">
+                        <br>
+                        <p class="ma0 f6 w-100 tl ff-roboto">Descripcion</p>
+                        <p class="ma0 lh-copy measure center f6 black-70 tj-l">
+                            Quite affectionate and outgoing.
+                            She loves to get chin scratches and will
+                            roll around on the floor waiting for you give her more of them.
+                        </p>
+                        <br>
+                        <div class="dt w-100 mt1">
+                          <div class="dtc">
+                            <h1 class="f5 f4-ns mv0 tl">Quincenal</h1>
+                          </div>
+                          <div class="dtc tr">
+                            <h2 class="f5 mv0">$1,000</h2>
+                          </div>
+                        </div>
+                  </div>
+                </article>
+            {% endfor %}
+        </section>
+    </div>
+{% endblock %}
