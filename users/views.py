@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.views import View
 from .models import YoungProfile
 from django.contrib import messages
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, logout
 
 
 class YoungSignUp(View):
@@ -41,3 +41,28 @@ class YoungSignUp(View):
             return redirect('young_signup')
 
         return redirect('services_list')
+
+
+class LoginView(View):
+
+    def post(self, request):
+        data = request.POST
+
+        try:
+            user = User.objects.get(email=data['email'])
+            logged_user = authenticate(username=user.username, password=data['password'])
+            if not logged_user:
+                raise User.DoesNotExist
+
+        except Exception as e:
+            print(e)
+            messages.add_message(request, messages.ERROR, 'Correo o contraseña no valida')
+
+        return redirect('services_list')
+
+
+class LogoutView(View):
+
+    def get(self, request):
+        logout(request)
+        return redirect('index')

@@ -3,6 +3,7 @@
     <p class="ff-roboto f4 w-100 tc">Inicia Sesión: </p>
 
     <form action="/login" method="post">
+        {% csrf_token %}
         <input class="clean_input ff-roboto" type="text" placeholder="correo">
         <br><br>
         <input class="clean_input ff-roboto" type="password" placeholder="contraseña">
