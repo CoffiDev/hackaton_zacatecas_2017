@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55579408-29cd-4438-9820-ce97d8a83d6b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/templates/jobs/service_detail.html" afterPath="$PROJECT_DIR$/jobs/templates/jobs/service_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/urls.py" afterPath="$PROJECT_DIR$/jobs/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/views.py" afterPath="$PROJECT_DIR$/jobs/views.py" />
-    </list>
+    <list default="true" id="55579408-29cd-4438-9820-ce97d8a83d6b" name="Default" comment="" />
     <ignored path="concam.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -40,8 +35,8 @@
       <file leaf-file-name="service_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/service_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+            <state relative-caret-position="285">
+              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -88,6 +83,7 @@
               <caret line="5" column="91" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="91" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+                <marker date="1498405030000" expanded="true" signature="116:346" ph="..." />
               </folding>
             </state>
           </provider>
@@ -847,6 +843,7 @@
           <caret line="5" column="91" selection-start-line="5" selection-start-column="77" selection-end-line="5" selection-end-column="91" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+            <marker date="1498405030000" expanded="true" signature="116:346" ph="..." />
           </folding>
         </state>
       </provider>
@@ -871,8 +868,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jobs/templates/jobs/service_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="285">
+          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#input#2;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
