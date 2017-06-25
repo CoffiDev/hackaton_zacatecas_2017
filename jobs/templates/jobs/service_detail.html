@@ -18,20 +18,47 @@
             <div class="map__opacity absolute top-0 left-0 b--near-back o-30"></div>
             <img class="serviceDetail__header__roundImg img_shadow br-50"
                  src="{{ object.client.image.url }}" alt="">
-            <div class="serviceDetail__contactBtn ff-roboto tc img_shadow">
-                {% if service.userIsAcepted %}
-                    Conectado
-                {% elif service.userHasRequested%}
-                    Solicitado
-                {% elif canApply %}
-                    Solicitar
+
+            <form action="/apply" method="post">
+                {% csrf_token %}
+                <input name="service" type="hidden" value="{{ object.pk }}">
+                <input name="young" type="hidden" value="{{ user.young_id }}">
+
+                {% if canApply and not userHasRequested %}
+                    <input type="submit" style="border: 0"
+                           class="serviceDetail__contactBtn ff-roboto tc img_shadow" value="Solicitar"/>
                 {% else %}
-                    No aplicable
+                    <div class="serviceDetail__contactBtn ff-roboto tc img_shadow">
+                        {% if userIsAcepted %}
+                            Conectado
+                        {% elif userHasRequested%}
+                            Solicitado
+                        {% else %}
+                            No aplica
+                        {% endif %}
+                    </div>
                 {% endif %}
-            </div>
+            </form>
         </div>
     </div>
     <br>
+
+    {% if messages or userIsAcepted %}
+    <div class="ff-roboto w-80 center pt3">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if userIsAcepted %}
+            <p>¡Felicidades!, fuiste aceptado, alguien se pondra en contacto contigo en breve</p>
+        {% endif %}
+    </div>
+    {% endif %}
+
     <div class="displayFlex justify-between pt4 center ff-roboto">
         <div class="w-40 dib tc">
             <p class="f6 tl pl4">{{ object.client.first_name }} {{ object.client.last_names }}</p>
