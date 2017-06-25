@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models
-
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
@@ -13,10 +11,15 @@ class Profile(models.Model):
     user = models.ForeignKey(User)
     first_name = models.CharField(max_length=255)
     last_names = models.CharField(max_length=255)
+    image = models.ImageField(blank=True, null=True)
+
+    def __str__(self):
+        return str(self.user)
 
 
 class ClientProfile(Profile):
-    pass
+
+    title = models.CharField(max_length=255)
 
 
 class YoungProfile(Profile):
