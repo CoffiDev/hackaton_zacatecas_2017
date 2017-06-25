@@ -1,4 +1,5 @@
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 
 class ServicesListView(ListView):
@@ -14,3 +15,11 @@ class ServicesListView(ListView):
         }, {
             "title": "Administrar mas optimamente los recursos"
         }]
+
+
+class ServicesDetailView(DetailView):
+
+    template_name = "jobs/service_detail.html"
+
+    def get_object(self, queryset=None):
+        return {"title": "Mejorar procesos"}

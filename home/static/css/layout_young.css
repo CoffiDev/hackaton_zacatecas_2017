@@ -2,6 +2,10 @@
     background-color: #f1f3f4;
 }
 
+.br-50 {
+    border-radius: 50%;
+}
+
 .blue_gradient {
     background: rgba(71,201,123,1);
     background: -moz-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,153,153,1) 100%);
@@ -14,7 +18,7 @@
 }
 
 .application_header {
-    height: 30px;
+    height: 50px;
 }
 
 .application_header > i {
@@ -31,4 +35,65 @@
 .service__titleLine {
     border: 0;
     height: 1px;
+}
+
+.serviceDetail__header {
+    //max-width: 600px;
+    min-height: 200px;
+}
+
+.serviceDetail__header > img:nth-child(1) {
+    //max-width: 600px;
+    min-height: 200px;
+    width: 100%;
+}
+
+.map__opacity {
+    width: 100%;
+    //max-width: 600px;
+    height: 100%;
+    min-height: 200px;
+    z-index: 2;
+    background: black;
+}
+
+.serviceDetail__header__roundImg {
+    position: absolute;
+    bottom: -40px;
+    width: 80px;
+    height: auto;
+    left: 40px;
+    z-index: 3;
+}
+
+.serviceDetail__contactBtn {
+    position: absolute;
+    right: 20px;
+    bottom: -25px;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background: royalblue;
+    z-index: 3;
+    color: #eeeeee;
+    font-size: 1.5rem;
+}
+
+.blue_line {
+    border: 0;
+    margin: 0 2rem;
+    height: 1px;
+    background-color: royalblue;
+}
+
+.img_shadow {
+    -webkit-box-shadow: 11px 16px 76px -15px rgba(0,0,0,0.75);
+-moz-box-shadow: 11px 16px 76px -15px rgba(0,0,0,0.75);
+box-shadow: 11px 16px 76px -15px rgba(0,0,0,0.75);
+}
+
+.light_shadow {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
