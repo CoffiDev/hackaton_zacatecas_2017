@@ -2,29 +2,50 @@
 {% block card_content %}
     <p>Registrate: </p>
 
-    <div>
-        <input type="text" placeholder="correo">
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form method="post" action="signUp/young">
+        {% csrf_token %}
+        <input name="email" type="text" placeholder="correo">
         <br>
-        <input type="text" placeholder="Nombre(s)">
+        <input name="first_name" type="text" placeholder="Nombre(s)">
         <br>
-        <input type="text" placeholder="Apellidos">
+        <input name="last_name" type="text" placeholder="Apellidos">
         <br>
-        <input type="password" placeholder="contraseña">
+        <input name="password" type="password" placeholder="contraseña">
+
         <br>
-        <input type="password" placeholder="confirma contraseña">
-        <br>
-        <select name="" id="">
-            <option value="" selected>Area de interés</option>
+        <p>Area de interés: </p>
+        <select name="interest_area">
+            <option value="Aricultura" selected>Aricultura</option>
+            <option value="Ganaderia">Ganaderia</option>
+            <option value="Mineria">Mineria</option>
+            <option value="Ingenieria">Ingenieria</option>
+            <option value="Sistemas">Sistemas</option>
+            <option value="Mecatronica">Mecatronica</option>
+            <option value="Licenciatura">Licenciatura</option>
         </select>
+
         <br>
-        <select name="" id="">
-            <option value="" selected>Nivel</option>
+        <p>Nivel: </p>
+        <select name="level" id="">
+            <option value="sin experiencia" selected>Sin experiencia</option>
+            <option value="con bachillerato">Bachillerato terminado</option>
+            <option value="carrera recien comenzada">Carrera recien comenzada</option>
+            <option value="carrera casi terminada">Carrera casi terminada</option>
+            <option value="profesionista">Profesionista</option>
         </select>
         <br>
         <p>Cuentanos tu perfil:</p>
-        <textarea name="perfil" id="" cols="30" rows="10" placeholder="Cuéntanos tu perfil">
+        <textarea name="description" id="" cols="30" rows="10" placeholder="Cuéntanos tu perfil">
         </textarea>
         <br>
         <input type="submit">
-    </div>
+    </form>
 {% endblock %}

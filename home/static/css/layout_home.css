@@ -23,6 +23,11 @@
     display: flex;
 }
 
+.clean_input {
+    border: 0;
+    border-bottom: 1px solid royalblue;
+}
+
 .green_gradient {
     background: rgba(71,201,123,1);
 background: -moz-linear-gradient(left, rgba(71,201,123,1) 0%, rgba(0,140,56,1) 100%);
