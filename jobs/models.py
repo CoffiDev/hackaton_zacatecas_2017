@@ -11,6 +11,7 @@ class Services(models.Model):
 
     client = models.ForeignKey(ClientProfile)
     youngs_registered = models.ManyToManyField(YoungProfile, blank=True, null=True)
+    youngs_requests = models.ManyToManyField(YoungProfile, blank=True, null=True, related_name='services_requestions')
 
     name = models.CharField(max_length=255)
     level = models.CharField(max_length=255, choices=settings.LEVEL)

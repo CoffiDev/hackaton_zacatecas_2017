@@ -23,8 +23,10 @@
                     Conectado
                 {% elif service.userHasRequested%}
                     Solicitado
-                {% else %}
+                {% elif canApply %}
                     Solicitar
+                {% else %}
+                    No aplicable
                 {% endif %}
             </div>
         </div>

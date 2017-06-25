@@ -1,12 +1,21 @@
 {% extends "home/index.html" %}
 {% block card_content %}
+
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <p class="ff-roboto f4 w-100 tc">Inicia Sesión: </p>
 
     <form action="/login" method="post">
         {% csrf_token %}
-        <input class="clean_input ff-roboto" type="text" placeholder="correo">
+        <input name="email" class="clean_input ff-roboto" type="text" placeholder="correo">
         <br><br>
-        <input class="clean_input ff-roboto" type="password" placeholder="contraseña">
+        <input name="password" class="clean_input ff-roboto" type="password" placeholder="contraseña">
         <br><br>
         <input class="db center ff-roboto f6 link dim br1 ba bw2 ph3 pv2 mb2 b--dark-blue dark-blue bg-white" type="submit">
     </form>

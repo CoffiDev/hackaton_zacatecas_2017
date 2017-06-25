@@ -120,7 +120,7 @@ MEDIA_URL = '/media/'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 INTEREST_AREA = [
-    ("Aricultura", "AGR"),
+    ("Agricultura", "AGR"),
     ("Ganaderia", "GAN"),
     ("Mineria", "MIN"),
     ("Ingenieria", "ING"),
